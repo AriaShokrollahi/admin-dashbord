@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-menu-size="sm-hover">
+
+<head>
+    <!-- Title Meta -->
+    <meta charset="utf-8" />
+    <title> مدیریت کاربران </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully responsive premium admin dashboard template" />
+    <meta name="author" content="Techzaa" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
+    <link rel="stylesheet" href="assets/css/fontiran.min.css">
+    <script src="assets/js/config.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="topbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="d-flex align-items-center">
+                        <!-- دکمه toggle منو -->
+                        <div class="topbar-item">
+                            <button type="button" class="button-toggle-menu me-2">
+                                <iconify-icon icon="solar:hamburger-menu-broken" class="fs-24 align-middle"></iconify-icon>
+                            </button>
+                        </div>
+        
+                        <!-- عنوان صفحه -->
+                        <div class="topbar-item">
+                            <h4 class="fw-bold topbar-button pe-none text-uppercase mb-0">لیست مشتری ها</h4>
+                            <h4 class="fw-bold topbar-button pe-none text-uppercase mb-0"> نام کارشناس  </h4>
+                        </div>
+                    </div>
+        
+                    <div class="d-flex align-items-center gap-1">
+        
+                        <!-- تم رنگ (روشن/تاریک) -->
+                        <div class="topbar-item">
+                            <button type="button" class="topbar-button" id="light-dark-mode">
+                                <iconify-icon icon="solar:moon-bold-duotone" class="fs-24 align-middle"></iconify-icon>
+                            </button>
+                        </div>
+        
+                        <!-- اعلان‌ها -->
+                        <div class="dropdown topbar-item">
+                            <button type="button" class="topbar-button position-relative"
+                                    id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                <iconify-icon icon="solar:bell-bing-bold-duotone" class="fs-24 align-middle"></iconify-icon>
+                                <span
+                                    class="position-absolute topbar-badge fs-10 translate-middle badge bg-danger rounded-pill">3<span
+                                        class="visually-hidden">پیام‌های خوانده نشده</span></span>
+                            </button>
+                            <div class="dropdown-menu py-0 dropdown-lg dropdown-menu-end"
+                                 aria-labelledby="page-header-notifications-dropdown">
+                                <div class="p-3 border-top-0 border-start-0 border-end-0 border-dashed border">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h6 class="m-0 fs-16 fw-semibold"> اعلان‌ها</h6>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="javascript: void(0);" class="text-dark text-decoration-underline">
+                                                <small>پاک کردن همه</small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-simplebar style="max-height: 280px;">
+
+                                    <!-- آیتم -->
+                                    <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="avatar-sm me-2">
+                                                           <span
+                                                               class="avatar-title bg-soft-info text-info fs-20 rounded-circle">
+                                                                D
+                                                           </span>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="mb-0 fw-semibold">دونوگویی سوزان</p>
+                                                <p class="mb-0 text-wrap">
+                                                    سلام، حال شما چطور است؟ جلسه بعدی ما چی؟
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- آیتم -->
+                                    <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0">
+                                                <img src="/images/users/avatar-3.jpg"
+                                                     class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-3"/>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="mb-0 fw-semibold">جیکوب گینس</p>
+                                                <p class="mb-0 text-wrap">پاسخ داد به کامنت شما در گراف پیش‌بینی جریان نقدی 🔔.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- آیتم -->
+                                    <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="avatar-sm me-2">
+                                                           <span
+                                                               class="avatar-title bg-soft-warning text-warning fs-20 rounded-circle">
+                                                                <iconify-icon
+                                                                    icon="iconamoon:comment-dots-duotone"></iconify-icon>
+                                                           </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <p class="mb-0 fw-semibold text-wrap">شما <b>20</b> پیام جدید در مکالمه دریافت کرده‌اید</p>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <!-- آیتم -->
+                                    <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0">
+                                                <img src="/images/users/avatar-5.jpg"
+                                                     class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-5"/>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="mb-0 fw-semibold">شان بنچ</p>
+                                                <p class="mb-0 text-wrap">
+                                                    نظر داده در پنل مدیر
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="text-center py-3">
+                                    <a href="javascript:void(0);" class="btn btn-primary btn-sm">مشاهده تمامی اعلان‌ها <i
+                                            class="bx bx-left-arrow-alt ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- جستجوی اپ -->
+                        <form class="app-search d-none d-md-block ms-2">
+                            <div class="position-relative">
+                                <input type="search" class="form-control" placeholder="جستجو..." autocomplete="off" value="">
+                                <iconify-icon icon="solar:magnifer-linear" class="search-widget-icon"></iconify-icon>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        
+            </div>
+        </header>
+
+        <div class="main-nav">
+            <!-- Sidebar Logo -->
+            <div class="logo-box">
+                <a href="index.html" class="logo-dark">
+                    <img src="" class="logo-sm" alt="logo sm">
+                    <img src="" class="logo-lg" alt="logo dark">
+                </a>
+
+                <a href="index.html" class="logo-light">
+                    <img src="جای لوگو" class="logo-sm" alt="logo sm">
+                    <img src="" class="logo-lg" alt="logo light">
+                </a>
+            </div>
+
+
+            <!-- Menu Toggle Button (sm-hover) -->
+            <button type="button" class="button-sm-hover" aria-label="Show Full Sidebar">
+                <iconify-icon icon="solar:double-alt-arrow-left-bold-duotone" class="button-sm-hover-icon"></iconify-icon>
+            </button>
+
+            <div class="scrollbar" data-simplebar>
+                <ul class="navbar-nav" id="navbar-nav">
+
+                    <li class="menu-title">منو</li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:widget-5-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> داشبورد </span>
+                        </a>
+                    </li>
+            
+                    <li class="nav-item">
+                        <a class="nav-link menu-arrow" href="#sidebarProducts" data-bs-toggle="collapse" role="button"
+                           aria-expanded="false" aria-controls="sidebarProducts">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> مدیریت مشاوره ها </span>
+                        </a>
+                        <div class="collapse" id="sidebarProducts">
+                            <ul class="nav sub-navbar-nav">
+                                <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="#"> جدید </a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="#">درحال بررسی</a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="#">پاسخ داده نشده</a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="#">همه</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="customer-list.html">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:users-group-two-rounded-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> مدیریت کاربران </span>
+                        </a>
+                    </li>
+                    
+            
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:box-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> مدیریت اشتراک </span>
+                        </a>
+                    </li>
+            
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:card-send-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> مدیریت مالی </span>
+                        </a>
+                    </li>
+
+            
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages-permission.html">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:user-speak-rounded-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> مدیریت کارشناسان </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:settings-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> تنظیمات </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-content">
+            <div class="container-fluid">                
+                <div class="row">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <div class="avatar-md bg-primary bg-opacity-10 rounded">
+                                        <iconify-icon icon="solar:users-group-two-rounded-bold-duotone" class="fs-32 text-primary avatar-title"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-0">همه مشتریان</h4>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="text-muted fw-medium fs-22 mb-0">+22.63k</p>
+                                    <div>
+                                        <span class="badge text-success bg-success-subtle fs-12"><i class="bx bx-up-arrow-alt"></i>34.4%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <div class="avatar-md bg-primary bg-opacity-10 rounded">
+                                        <iconify-icon icon="solar:headphones-round-sound-bold-duotone" class="fs-32 text-primary avatar-title"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-0">درخواست خدمات</h4>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="text-muted fw-medium fs-22 mb-0">+1.03k</p>
+                                    <div>
+                                        <span class="badge text-success bg-success-subtle fs-12"><i class="bx bx-up-arrow-alt"></i>12.6%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <div class="avatar-md bg-primary bg-opacity-10 rounded">
+                                        <iconify-icon icon="solar:bill-list-bold-duotone" class="fs-32 text-primary avatar-title"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-0">صورتحساب و پرداخت</h4>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="text-muted fw-medium fs-22 mb-0">$38,908.00</p>
+                                    <div>
+                                        <span class="badge text-success bg-success-subtle fs-12"><i class="bx bx-up-arrow-alt"></i>45.9%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="d-flex card-header justify-content-between align-items-center">
+                                <div>
+                                    <h4 class="card-title">لیست تمام مشتریان</h4>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle btn btn-sm btn-outline-light rounded" data-bs-toggle="dropdown" aria-expanded="false">
+                                        این ماه
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a href="#!" class="dropdown-item">سال</a>
+                                        <a href="#!" class="dropdown-item">ماه</a>
+                                        <a href="#!" class="dropdown-item">روز</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table align-middle mb-0 table-hover table-centered">
+                                        <thead class="bg-light-subtle">
+                                            <tr>
+                                                <th style="width: 120px;">
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                        <label class="form-check-label" for="customCheck1"></label>
+                                                    </div>
+                                                </th>
+                                                <th>نام مشتری</th>
+                                                <th>شناسه صورتحساب</th>
+                                                <th>وضعیت</th>
+                                                <th>مجموع مبلغ</th>
+                                                <th>تاریخ سررسید</th>
+                                                <th>روش پرداخت</th>
+                                                <th>عملیات</th>
+                                                <th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                        <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><img src="/images/users/avatar-2.jpg" class="avatar-sm rounded-circle me-2" alt="..."> مایکل آ. ماینر</td>
+                                                <td><a href="javascript: void(0);" class="text-body">#INV2540</a> </td>
+                                                <td> <span class="badge bg-success-subtle text-success py-1 px-2">تکمیل شده</span> </td>
+                                                <td> $4,521 </td>
+                                                <td> 07 ژانویه، 2023</td>
+                                                <td> مسترکارت </td>
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck3">
+                                                        <label class="form-check-label" for="customCheck3">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><img src="/images/users/avatar-3.jpg" class="avatar-sm rounded-circle me-2" alt="..."> ترزا تی. برُس</td>
+                                                <td><a href="javascript: void(0);" class="text-body">#INV3924</a> </td>
+                                                <td> <span class="badge bg-danger-subtle text-danger px-2 py-1">لغو شده</span> </td>
+                                                <td> $7,836 </td>                                                <td> 03 دسامبر، 2023</td>
+                                                <td> ویزا </td>
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck4">
+                                                        <label class="form-check-label" for="customCheck4">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><img src="/images/users/avatar-4.jpg" class="avatar-sm rounded-circle me-2" alt="..."> جیمز ال. اریکسون</td>
+                                                <td><a href="javascript: void(0);" class="text-body">#INV5032</a> </td>
+                                                <td>
+                                                    <span class="badge bg-success-subtle text-success py-1 px-2">تکمیل شده</span>
+                                                </td>
+                                                <td> $1,347 </td>
+                                                <td> 28 سپتامبر، 2023 </td>
+                                                <td> پی پال </td>
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck5">
+                                                        <label class="form-check-label" for="customCheck5">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><img src="/images/users/avatar-5.jpg" class="avatar-sm rounded-circle me-2" alt="..."> لیلی و. ویلسون</td>
+                                                <td><a href="javascript: void(0);" class="text-body">#INV1695</a> </td>
+                                                <td><span class="badge bg-primary-subtle text-primary py-1 px-2">در انتظار</span></td>
+                                                <td> $9,457 </td>
+                                                <td>10 آگوست، 2023</td>
+                                                <td> مسترکارت</td>
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck6">
+                                                        <label class="form-check-label" for="customCheck6">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><img src="/images/users/avatar-6.jpg" class="avatar-sm rounded-circle me-2" alt="..."> سارا م. بروکس</td>
+                                                <td><a href="javascript: void(0);" class="text-body">#INV8473</a> </td>
+                                                <td> <span class="badge bg-danger-subtle text-danger px-2 py-1 ">لغو شده</span></td>
+                                                <td> $4,214</td>
+                                                <td> 22 مه، 2023 </td>
+                                                <td> ویزا</td>
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck7">
+                                                        <label class="form-check-label" for="customCheck7">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><img src="/images/users/avatar-7.jpg" class="avatar-sm rounded-circle me-2" alt="..."> جو ک. هال</td>
+                                                <td><a href="javascript: void(0);" class="text-body">#INV2150</a> </td>
+                                                <td> <span class="badge bg-success-subtle text-success py-1 px-2">تکمیل شده</span> </td>
+                                                <td>$2,513</td>
+                                                <td>15 مارس، 2023</td>
+                                                <td> پی پال </td>
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck8">
+                                                        <label class="form-check-label" for="customCheck8">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><img src="/images/users/avatar-8.jpg" class="avatar-sm rounded-circle me-2" alt="..."> رالف هویبر</td>
+                                                <td><a href="javascript: void(0);" class="text-body">#INV5636</a> </td>
+                                                <td> <span class="badge bg-success-subtle text-success py-1 px-2">تکمیل شده</span> </td>
+                                                <td>$3,103</td>
+                                                <td>15 مارس، 2023</td>
+                                                <td> ویزا </td>
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck9">
+                                                        <label class="form-check-label" for="customCheck9">&nbsp;</label>
+                                                    </td>
+                                                </td>
+                                                <td><img src="/images/users/avatar-9.jpg" class="avatar-sm rounded-circle me-2" alt="..."> سارا درشر</td>
+                                                <td><a href="javascript: void(0);" class="text-body">#INV2940</a> </td>
+                                                <td> <span class="badge bg-success-subtle text-success py-1 px-2">تکمیل شده</span> </td>
+                                                <td>$2,416</td>
+                                                <td>15 مارس، 2023</td>
+                                                <td> مسترکارت </td>
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customCheck10">
+                                                        <label class="form-check-label" for="customCheck10">&nbsp;</label>
+                                                    </td>
+                                                </td>
+                                                <td><img src="/images/users/avatar-10.jpg" class="avatar-sm rounded-circle me-2" alt="..."> لئونی مایستر</td>
+                                                <td><a href="javascript: void(0);" class="text-body">#INV9027</a> </td>
+                                                <td><span class="badge bg-primary-subtle text-primary py-1 px-2">در انتظار</span></td>
+                                                <td>$1,367</td>
+                                                <td>15 مارس، 2023 </td>
+                                                <td> پی پال </td>
+                                                <td>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                        <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- end table-responsive -->
+                            </div>
+
+                            <div class="card-footer border-top">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-end mb-0">
+                                        <li class="page-item"><a class="page-link" href="javascript:void(0);">قبلی</a></li>
+                                        <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="javascript:void(0);">بعدی</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/layout.js"></script>
+</body>
+
+</html>

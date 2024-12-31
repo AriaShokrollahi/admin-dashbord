@@ -1,0 +1,6 @@
+.ش{
+background: var(--PrimaryColor, #634444);
+background: var(--SecondaryColor, #C98B8B);
+background: var(--AccentColor, #C98B8B);
+background: var(--ColorBG, #FFEADA);
+}

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-menu-size="sm-hover">
+
+<head>
+    <!-- Title Meta -->
+    <meta charset="utf-8" />
+    <title> داشبورد </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully responsive premium admin dashboard template" />
+    <meta name="author" content="Techzaa" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
+    <link rel="stylesheet" href="assets/css/fontiran.min.css">
+    <script src="assets/js/config.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="topbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="d-flex align-items-center">
+                        <!-- دکمه toggle منو -->
+                        <div class="topbar-item">
+                            <button type="button" class="button-toggle-menu me-2">
+                                <iconify-icon icon="solar:hamburger-menu-broken" class="fs-24 align-middle"></iconify-icon>
+                            </button>
+                        </div>
+        
+                        <!-- عنوان صفحه -->
+                        <div class="topbar-item">
+                            <h4 class="fw-bold topbar-button pe-none text-uppercase mb-0"> داشبورد </h4>
+                        </div>
+                    </div>
+        
+                    <div class="d-flex align-items-center gap-1">
+        
+                        <!-- تم رنگ (روشن/تاریک) -->
+
+                        <div class="topbar-item">
+                            <button type="button" class="topbar-button" id="light-dark-mode" title="theme">
+                                <iconify-icon icon="solar:moon-bold-duotone" class="fs-24 align-middle"></iconify-icon>
+                            </button>
+                        </div>
+        
+                        <!-- اعلان‌ها -->
+
+                        <div class="dropdown topbar-item">
+                            <button type="button" class="topbar-button position-relative"
+                                    id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                <iconify-icon icon="solar:bell-bing-bold-duotone" class="fs-24 align-middle"></iconify-icon>
+                                <span
+                                    class="position-absolute topbar-badge fs-10 translate-middle badge bg-danger rounded-pill">3<span
+                                        class="visually-hidden">پیام‌های خوانده نشده</span></span>
+                            </button>
+                            <div class="dropdown-menu py-0 dropdown-lg dropdown-menu-end"
+                                 aria-labelledby="page-header-notifications-dropdown">
+                                <div class="p-3 border-top-0 border-start-0 border-end-0 border-dashed border">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h6 class="m-0 fs-16 fw-semibold"> اعلان‌ها</h6>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="javascript: void(0);" class="text-dark text-decoration-underline">
+                                                <small>پاک کردن همه</small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-simplebar style="max-height: 280px;">
+                                    <!-- آیتم -->
+
+                                    <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="avatar-sm me-2">
+                                                           <span
+                                                               class="avatar-title bg-soft-info text-info fs-20 rounded-circle">
+                                                                D
+                                                           </span>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="mb-0 fw-semibold">دونوگویی سوزان</p>
+                                                <p class="mb-0 text-wrap">
+                                                    سلام، حال شما چطور است؟ جلسه بعدی ما چی؟
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- آیتم -->
+                                    <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0">
+                                                <img src="/images/users/avatar-3.jpg"
+                                                     class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-3"/>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="mb-0 fw-semibold">جیکوب گینس</p>
+                                                <p class="mb-0 text-wrap">پاسخ داد به کامنت شما در گراف پیش‌بینی جریان نقدی 🔔.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- آیتم -->
+                                    <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="avatar-sm me-2">
+                                                           <span
+                                                               class="avatar-title bg-soft-warning text-warning fs-20 rounded-circle">
+                                                                <iconify-icon
+                                                                    icon="iconamoon:comment-dots-duotone"></iconify-icon>
+                                                           </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <p class="mb-0 fw-semibold text-wrap">شما <b>20</b> پیام جدید در مکالمه دریافت کرده‌اید</p>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <!-- آیتم -->
+                                    <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0">
+                                                <img src="/images/users/avatar-5.jpg"
+                                                     class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-5"/>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="mb-0 fw-semibold">شان بنچ</p>
+                                                <p class="mb-0 text-wrap">
+                                                    نظر داده در پنل مدیر
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="text-center py-3">
+                                    <a href="javascript:void(0);" class="btn btn-primary btn-sm">مشاهده تمامی اعلان‌ها <i
+                                            class="bx bx-left-arrow-alt ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- جستجوی اپ -->
+                        <form class="app-search d-none d-md-block ms-2">
+                            <div class="position-relative">
+                                <input type="search" class="form-control" placeholder="جستجو..." autocomplete="off" value="">
+                                <iconify-icon icon="solar:magnifer-linear" class="search-widget-icon"></iconify-icon>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        
+            </div>
+        </header>
+
+        <div class="main-nav">
+            <!-- Sidebar Logo -->
+            <div class="logo-box">
+                <a href="index.html" class="logo-dark">
+                    <img src="" class="logo-sm" alt="logo sm">
+                    <img src="" class="logo-lg" alt="logo dark">
+                </a>
+
+                <a href="index.html" class="logo-light">
+                    <img src="جای لوگو" class="logo-sm" alt="logo sm">
+                    <img src="" class="logo-lg" alt="logo light">
+                </a>
+            </div>
+
+            <!-- Menu Toggle Button (sm-hover) -->
+            <button type="button" class="button-sm-hover" aria-label="Show Full Sidebar">
+                <iconify-icon icon="solar:double-alt-arrow-left-bold-duotone" class="button-sm-hover-icon"></iconify-icon>
+            </button>
+
+            <div class="scrollbar" data-simplebar>
+                <ul class="navbar-nav" id="navbar-nav">
+
+                    <li class="menu-title">منو</li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:widget-5-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> داشبورد </span>
+                        </a>
+                    </li>
+            
+                    <li class="nav-item">
+                        <a class="nav-link menu-arrow" href="#sidebarProducts" data-bs-toggle="collapse" role="button"
+                           aria-expanded="false" aria-controls="sidebarProducts">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> مدیریت مشاوره ها </span>
+                        </a>
+                        <div class="collapse" id="sidebarProducts">
+                            <ul class="nav sub-navbar-nav">
+                                <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="#"> جدید </a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="#">درحال بررسی</a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="#">پاسخ داده نشده</a>
+                                </li>
+                                <li class="sub-nav-item">
+                                    <a class="sub-nav-link" href="#">همه</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+            
+                    <li class="nav-item">
+                        <a class="nav-link" href="customer-list.html">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:users-group-two-rounded-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> مدیریت کاربران </span>
+                        </a>
+                    </li>
+            
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:box-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> مدیریت اشتراک </span>
+                        </a>
+                    </li>
+            
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:card-send-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> مدیریت مالی </span>
+                        </a>
+                    </li>
+
+            
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages-permission.html">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:user-speak-rounded-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> مدیریت کارشناسان </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="nav-icon">
+                                <iconify-icon icon="solar:settings-bold-duotone"></iconify-icon>
+                            </span>
+                            <span class="nav-text"> تنظیمات </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xxl-15">
+                    <div class="row">
+            
+                        <div class="col-md-12">
+                            <div class="card overflow-hidden">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                        </div> <!-- end col -->
+                                        <div class="col-6 text-end">
+                                            <p class="text-muted mb-0 text-truncate">تعداد سفارشات</p>
+                                            <h3 class="text-dark mt-1 mb-0">13, 647</h3>
+                                        </div> <!-- end col -->
+                                    </div> <!-- end row-->
+                                </div> <!-- end card body -->
+                                <div class="card-footer py-2 bg-light bg-opacity-50">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <span class="text-success"> <i class="bx bxs-up-arrow fs-12"></i> 2.3%</span>
+                                            <span class="text-muted ms-1 fs-12">هفته گذشته</span>
+                                        </div>
+                                        <a href="#!" class="text-reset fw-semibold fs-12">مشاهده بیشتر</a>
+                                    </div>
+                                </div> <!-- end card body -->
+                            </div> <!-- end card -->
+                        </div> <!-- end col -->
+                        <div class="col-md-12">
+                            <div class="card overflow-hidden">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="avatar-md bg-soft-primary rounded">
+                                                <i class="bx bx-award avatar-title fs-24 text-primary"></i>
+                                            </div>
+                                        </div> <!-- end col -->
+                                        <div class="col-6 text-end">
+                                            <p class="text-muted mb-0 text-truncate">لیدهای جدید</p>
+                                            <h3 class="text-dark mt-1 mb-0">9, 526</h3>
+                                        </div> <!-- end col -->
+                                    </div> <!-- end row-->
+                                </div> <!-- end card body -->
+                                <div class="card-footer py-2 bg-light bg-opacity-50">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <span class="text-success"> <i class="bx bxs-up-arrow fs-12"></i> 8.1%</span>
+                                            <span class="text-muted ms-1 fs-12">ماه گذشته</span>
+                                        </div>
+                                        <a href="#!" class="text-reset fw-semibold fs-12">مشاهده بیشتر</a>
+                                    </div>
+                                </div> <!-- end card body -->
+                            </div> <!-- end card -->
+                        </div> <!-- end col -->
+                        <div class="col-md-6">
+                            <div class="card overflow-hidden">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="avatar-md bg-soft-primary rounded">
+                                                <i class="bx bxs-backpack avatar-title fs-24 text-primary"></i>
+                                            </div>
+                                        </div> <!-- end col -->
+                                        <div class="col-6 text-end">
+                                            <p class="text-muted mb-0 text-truncate">معاملات</p>
+                                            <h3 class="text-dark mt-1 mb-0">976</h3>
+                                        </div> <!-- end col -->
+                                    </div> <!-- end row-->
+                                </div> <!-- end card body -->
+                                <div class="card-footer py-2 bg-light bg-opacity-50">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <span class="text-danger"> <i class="bx bxs-down-arrow fs-12"></i> 0.3%</span>
+                                            <span class="text-muted ms-1 fs-12">ماه گذشته</span>
+                                        </div>
+                                        <a href="#!" class="text-reset fw-semibold fs-12">مشاهده بیشتر</a>
+                                    </div>
+                                </div> <!-- end card body -->
+                            </div> <!-- end card -->
+                        </div> <!-- end col -->
+                        <div class="col-md-6">
+                            <div class="card overflow-hidden">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="avatar-md bg-soft-primary rounded">
+                                                <i class="bx bx-dollar-circle avatar-title text-primary fs-24"></i>
+                                            </div>
+                                        </div> <!-- end col -->
+                                        <div class="col-6 text-end">
+                                            <p class="text-muted mb-0 text-truncate">درآمد رزرو شده</p>
+                                            <h3 class="text-dark mt-1 mb-0">$123.6k</h3>
+                                        </div> <!-- end col -->
+                                    </div> <!-- end row-->
+                                </div> <!-- end card body -->
+                                <div class="card-footer py-2 bg-light bg-opacity-50">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <span class="text-danger"> <i class="bx bxs-down-arrow fs-12"></i> 10.6%</span>
+                                            <span class="text-muted ms-1 fs-12">ماه گذشته</span>
+                                        </div>
+                                        <a href="#!" class="text-reset fw-semibold fs-12">مشاهده بیشتر</a>
+                                    </div>
+                                </div> <!-- end card body -->
+                            </div> <!-- end card -->
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+                </div> <!-- end col -->
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/layout.js"></script>
+</body>
+
+</html>
