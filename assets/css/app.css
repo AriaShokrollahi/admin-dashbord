@@ -100,7 +100,7 @@ html[data-bs-theme=dark][data-topbar-color=light] {
   --bs-cyan: #4ecac2;
   --bs-light: #eef2f7;
   --bs-dark: #323a46;
-  --bs-primary-rgb: 255, 108, 47;
+  --bs-primary-rgb: 201, 139, 139;
   --bs-secondary-rgb: 93, 113, 134;
   --bs-success-rgb: 34, 197, 94;
   --bs-warning-rgb: 249, 185, 49;
@@ -8430,6 +8430,7 @@ textarea.form-control-lg {
   position: static !important;
 }
 
+
 .position-relative {
   position: relative !important;
 }
@@ -13910,6 +13911,33 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
 }
+.card-body .app-search-1 {
+  order: none;
+  width: 300px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: var(--bs-topbar-search-bg);
+  box-shadow: none;
+  height: 42px;
+  border-radius: 0px;
+}
+
+.card-body .search-widget-icon-1 {
+  position: absolute;
+  z-index: 20;
+  font-size: 18px;
+  left: 11px;
+  top: 50%;
+  color: #8486a7;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.card-body .app-search .search-widget-icon-1-close {
+  left: 7px;
+  right: auto !important;
+}
+
 .topbar .app-search .form-control {
   border: none;
   width: 300px;

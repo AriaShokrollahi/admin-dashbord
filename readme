@@ -1,6 +1,6 @@
 .ش{
 background: var(--PrimaryColor, #634444);
-background: var(--SecondaryColor, #C98B8B);
+background: var(--SecondaryColor, rgb(201, 139, 139));
 background: var(--AccentColor, #C98B8B);
 background: var(--ColorBG, #FFEADA);
 background: var(--ColorBG, rgb(34, 23, 23));
