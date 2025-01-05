@@ -5125,6 +5125,61 @@ textarea.form-control-lg {
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
 }
+.card-body .form-control {
+  order: none;
+  padding-right: 15px;
+  width: 250px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: var(--bs-topbar-search-bg);
+  box-shadow: none;
+  height: 42px;
+  border-radius: 7px;
+}
+
+.card-body .search-widget-icon-1 {
+  position: absolute;
+  left: 15px;
+  z-index: 20;
+  font-size: 18px;
+  top: 50%;
+  color: #8486a7;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.card-body .app-search .search-widget-icon-1-close {
+  left: 7px;
+  right: auto !important;
+}
+
+.card .form-control {
+  order: none;
+  padding-right: 15px;
+  width: 250px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: var(--bs-topbar-search-bg);
+  box-shadow: none;
+  height: 42px;
+  border-radius: 7px;
+}
+
+.card .search-widget-icon-1 {
+  position: absolute;
+  left: 15px;
+  z-index: 20;
+  font-size: 18px;
+  top: 50%;
+  color: #8486a7;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.card .app-search .search-widget-icon-1-close {
+  left: 7px;
+  right: auto !important;
+}
 
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
@@ -13911,32 +13966,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
 }
-.card-body .app-search-1 {
-  order: none;
-  width: 300px;
-  padding-right: 15px;
-  padding-left: 15px;
-  background-color: var(--bs-topbar-search-bg);
-  box-shadow: none;
-  height: 42px;
-  border-radius: 0px;
-}
 
-.card-body .search-widget-icon-1 {
-  position: absolute;
-  z-index: 20;
-  font-size: 18px;
-  left: 11px;
-  top: 50%;
-  color: #8486a7;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.card-body .app-search .search-widget-icon-1-close {
-  left: 7px;
-  right: auto !important;
-}
 
 .topbar .app-search .form-control {
   border: none;
