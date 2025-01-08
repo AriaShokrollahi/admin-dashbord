@@ -3483,12 +3483,12 @@ textarea.form-control-lg {
   --bs-btn-bg: #C98B8B;
   --bs-btn-border-color: #C98B8B;
   --bs-btn-hover-color: #ffffff;
-  --bs-btn-hover-bg: #e6612a;
-  --bs-btn-hover-border-color: #e6612a;
+  --bs-btn-hover-bg: #9c6c6c;
+  --bs-btn-hover-border-color: #9c6c6c;
   --bs-btn-focus-shadow-rgb: 255, 130, 78;
   --bs-btn-active-color: #ffffff;
-  --bs-btn-active-bg: #cc5626;
-  --bs-btn-active-border-color: #bf5123;
+  --bs-btn-active-bg: #9c6c6c;
+  --bs-btn-active-border-color: #9c6c6c;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #ffffff;
   --bs-btn-disabled-bg: #C98B8B;
@@ -14056,6 +14056,8 @@ html[data-menu-size=hidden] .topbar {
   overflow: hidden;
   text-align: center;
   white-space: nowrap;
+  display: flex;
+  flex-direction: column;
   transition: all 0.3s ease-in-out;
   line-height: var(--bs-topbar-height);
   padding: 0 var(--bs-main-nav-item-padding-x);
