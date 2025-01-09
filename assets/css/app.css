@@ -502,6 +502,7 @@ caption {
 th {
   text-align: inherit;
   text-align: -webkit-match-parent;
+  text-align: match-align;
 }
 
 thead,
@@ -13966,7 +13967,29 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
 }
-
+.dropdown .app-search .form-control {
+  border: none;
+  width: 300px;
+  padding-right: 40px;
+  padding-left: 15px;
+  background-color: var(--bs-topbar-search-bg);
+  box-shadow: none;
+  height: 42px;
+}
+.dropdown .app-search .search-widget-icon {
+  position: absolute;
+  z-index: 10;
+  font-size: 18px;
+  right: 11px;
+  top: 50%;
+  color: #8486a7;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.dropdown .app-search .search-widget-icon-close {
+  left: 7px;
+  right: auto !important;
+}
 
 .topbar .app-search .form-control {
   border: none;
