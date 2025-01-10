@@ -208,179 +208,84 @@
     </div>
 </div>
 
+
+
         <div class="page-content">
             <div class="container-fluid">
+                <div class="col-xxl-12 d-none d-md-block">
+                    <div class="card">
+                        <div class="card-body ">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="text-muted fw-medium fs-16 mb-0">شماره ی مشاوره: +123456789</p>
+                                <p class="text-muted fw-medium fs-16 mb-0">|</p>
+                                <p class="text-muted fw-medium fs-16 mb-0">موضوع مشاوره: none</p>
+                                <p class="text-muted fw-medium fs-16 mb-0">|</p>
+                                <p class="text-muted fw-medium fs-16 mb-0">وضعیت: <strong class="text-orange">درحال بررسی</strong></p> 
+                                <p class="text-muted fw-medium fs-16 mb-0">|</p>
+                                <button type="button" class="btn btn-outline-danger">مسدود کردن کاربر</button>
+                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                    مشاهده سوابق کاربر
+                                </button>             
+                                <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalCenterTitle"> مشاهده سوابق کاربر</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <P>شماره: +123456789 | تاریخ 25/10/1403 | موضوع مشاوره: none | وضعیت: باز</P><hr>
+                                                <P>شماره: +123456789 | تاریخ 25/10/1403 | موضوع مشاوره: none | وضعیت: باز</P><hr>
+                                                <P>شماره: +123456789 | تاریخ 25/10/1403 | موضوع مشاوره: none | وضعیت: باز</P><hr>
+                                                <P>شماره: +123456789 | تاریخ 25/10/1403 | موضوع مشاوره: none | وضعیت: باز</P><hr>
+                                                <P>شماره: +123456789 | تاریخ 25/10/1403 | موضوع مشاوره: none | وضعیت: باز</P><hr>
+                                                <P>شماره: +123456789 | تاریخ 25/10/1403 | موضوع مشاوره: none | وضعیت: باز</P><hr>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">بستن</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+
+                             </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row g-1">
                     <div class="col-xxl-3">
                         <div class="offcanvas-xxl offcanvas-start h-400" tabindex="-1" id="Contactoffcanvas" aria-labelledby="ContactoffcanvasLabel">
                             <div class="card position-relative overflow-hidden">
-                                <div class="card-header border-0 d-flex justify-content-between align-items-center">
-                                    <h4 class="card-title">چت</h4>
-                                </div>
-                
-                                <ul class="nav nav-tabs nav-justified nav-bordered border-top mt-3">
-                                    <li class="nav-item">
-                                        <a href="#chat-list" data-bs-toggle="tab" aria-expanded="false" class="nav-link active py-2">
-                                            چت
-                                        </a>
-                                    </li>
-                                </ul>
 
-                                <!--لیست کاربران-->
                                 <div class="tab-content">
                                     <div class="tab-pane show active" id="chat-list">
-                                        <div class="px-3 mb-3 chat-setting-height" data-simplebar>
-                                            <a href="javascript:void(0);" class="text-body">
-                                                <div class="d-flex align-items-center bg-light bg-opacity-50 p-2 rounded-1">
-                                                    <div class="flex-shrink-0 position-relative">
-                                                        <img src="/images/users/avatar-4.jpg" class="me-2 rounded-circle" height="36" alt="avatar-4" />
-                                                    </div>
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <h5 class="my-0">
-                                                            <span class="float-end text-muted fs-13">الان</span>
-                                                            گیلبرت چیکوین
-                                                        </h5>
-                                                        <p class="mt-1 mb-0 fs-13 text-muted">
-                                                            <span class="w-75 text-primary">در حال تایپ...</span>
-                                                        </p>
-                                                    </div>
+                                        <div class="offcanvas-body p-0 h-100" data-simplebar>
+                                            <div class="p-3">
+                                                <div class="text-center">
+                                                    <img src="/images/users/avatar-4.jpg" alt="shreyu" class="img-thumbnail avatar-lg rounded-circle mb-1">
+                                                    <h4>گیلبرت چیکوین</h4>
                                                 </div>
-                                            </a>
-                                            <a href="javascript:void(0);" class="text-body">
-                                                <div class="d-flex align-items-center p-2">
-                                                    <div class="flex-shrink-0 position-relative">
-                                                        <img src="/images/users/avatar-2.jpg" class="me-2 rounded-circle" height="36" alt="avatar-2" />
-                                                    </div>
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <h5 class="my-0">
-                                                            <span class="float-end text-muted fs-13">10:20 صبح</span>
-                                                            گاستون لپیر
-                                                        </h5>
-                                                        <p class="mt-1 mb-0 fs-13 text-muted d-flex align-items-end justify-content-between">
-                                                            <span class="w-75">حالت امروز چطوره؟</span>
-                                                            <i class="bx bx-check-double text-success"></i>
-                                                        </p>
-                                                    </div>
+                                    
+                                                <div class="mt-3">
+                                    
+                                                    <p class="mt-3 mb-1"><strong><i class="bi bi-phone"></i> شماره تلفن:</strong></p>
+                                                    <p>+1 456 9595 9594</p>
+                                    
+                                                    <p class="mt-3 mb-1"><strong><i class="bi bi-geo-alt"></i> سن:</strong></p>
+                                                    <p> 28 سال </p>
+                                    
+                                                    <p class="mt-3 mb-1"><strong><i class="bi bi-globe"></i> وضعیت تاهل:</strong></p>
+                                                    <p> مجرد </p>
+        
+                                                    <p class="mt-3 mb-1"><strong><i class="bi bi-globe"></i>  ابتلا به بیماری خاص:</strong></p>
+                                                    <p> ندارد </p>
+        
+                                                    <p class="mt-3 mb-1"><strong><i class="bi bi-globe"></i>  مصرف دارو:</strong></p>
+                                                    <p> ندارد </p>
+        
                                                 </div>
-                                            </a>
-                                            <a href="javascript:void(0);" class="text-body">
-                                                <div class="d-flex align-items-center p-2">
-                                                    <div class="flex-shrink-0 position-relative">
-                                                        <img src="/images/users/avatar-3.jpg" class="me-2 rounded-circle" height="36" alt="avatar-3" />
-                                                    </div>
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <h5 class="my-0">
-                                                            <span class="float-end text-muted fs-13">11:03 صبح</span>
-                                                            فانتینا لاباتیئر
-                                                        </h5>
-                                                        <p class="mt-1 mb-0 fs-13 text-muted d-flex align-items-end justify-content-between">
-                                                            <span class="w-75">سلام! یک یادآوری برای جلسه فردا...</span>
-                                                            <i class="bx bx-check-double text-success"></i>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" class="text-body">
-                                                <div class="d-flex align-items-center p-2">
-                                                    <div class="flex-shrink-0 position-relative">
-                                                        <img src="/images/users/avatar-5.jpg" class="me-2 rounded-circle" height="36" alt="avatar-5" />
-                                                    </div>
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <h5 class="my-0">
-                                                            <span class="float-end text-muted fs-13">دیروز</span>
-                                                            مینیونت برودوئر
-                                                        </h5>
-                                                        <p class="mt-1 mb-0 fs-13 text-muted d-flex align-items-end justify-content-between">
-                                                            <span class="w-75">آیا امروز جلسه برنامه‌ریزی این هفته را خواهیم داشت؟</span>
-                                                            <i class="bx bx-check-double text-success"></i>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" class="text-body">
-                                                <div class="d-flex align-items-center p-2">
-                                                    <div class="flex-shrink-0 position-relative">
-                                                        <img src="/images/users/avatar-6.jpg" class="me-2 rounded-circle" height="36" alt="avatar-6" />
-                                                    </div>
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <h5 class="my-0">
-                                                            <span class="float-end text-muted fs-13">دیروز</span>
-                                                            توماس منارد
-                                                        </h5>
-                                                        <p class="mt-1 mb-0 fs-13 text-muted d-flex align-items-end justify-content-between">
-                                                            <span class="w-75">لطفاً این الگو را بررسی کنید...</span>
-                                                            <i class="bx bx-check-double text-success"></i>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" class="text-body">
-                                                <div class="d-flex align-items-center p-2">
-                                                    <div class="flex-shrink-0 position-relative">
-                                                        <img src="/images/users/avatar-7.jpg" class="me-2 rounded-circle" height="36" alt="avatar-7" />
-                                                    </div>
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <h5 class="my-0">
-                                                            <span class="float-end text-muted fs-13">دیروز</span>
-                                                            ملیساند لپوئنت
-                                                        </h5>
-                                                        <p class="mt-1 mb-0 fs-13 text-muted d-flex align-items-end justify-content-between">
-                                                            <span class="w-75">آیا 10 دقیقه وقت دارید؟ می‌خواهم در مورد چیزی صحبت کنم...</span>
-                                                            <i class="bx bx-check-double text-success"></i>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" class="text-body">
-                                                <div class="d-flex align-items-center p-2">
-                                                    <div class="flex-shrink-0 position-relative">
-                                                        <img src="/images/users/avatar-8.jpg" class="me-2 rounded-circle" height="36" alt="avatar-8" />
-                                                    </div>
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <h5 class="my-0">
-                                                            <span class="float-end text-muted fs-13">7/8/21</span>
-                                                            دانیل دسپین
-                                                        </h5>
-                                                        <p class="mt-1 mb-0 fs-13 text-muted d-flex align-items-end justify-content-between">
-                                                            <span class="w-75">چطوری؟</span>
-                                                            <i class="bx bx-check-double text-success"></i>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" class="text-body">
-                                                <div class="d-flex align-items-center p-2">
-                                                    <div class="flex-shrink-0 position-relative">
-                                                        <img src="/images/users/avatar-9.jpg" class="me-2 rounded-circle" height="36" alt="avatar-9" />
-                                                    </div>
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <h5 class="my-0">
-                                                            <span class="float-end text-muted fs-13">7/8/21</span>
-                                                            آنفروئی پیکت
-                                                        </h5>
-                                                        <p class="mt-1 mb-0 fs-13 text-muted d-flex align-items-end justify-content-between">
-                                                            <span class="w-75">چه خبر؟</span>
-                                                            <i class="bx bx-check-double text-success"></i>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" class="text-body">
-                                                <div class="d-flex align-items-center p-2">
-                                                    <div class="flex-shrink-0 position-relative">
-                                                        <img src="/images/users/avatar-10.jpg" class="me-2 rounded-circle" height="36" alt="avatar-10" />
-                                                    </div>
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <h5 class="my-0">
-                                                            <span class="float-end text-muted fs-13">7/8/21</span>
-                                                            کاری بویزور
-                                                        </h5>
-                                                        <p class="mt-1 mb-0 fs-13 text-muted">
-                                                            <span class="w-75">آیا می‌خواهید به ما بپیوندید؟</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -388,10 +293,12 @@
                         </div>
                     </div> <!-- end col -->
                 
+                    
+
                     <div class="col-xxl-9">
                         <div class="card position-relative overflow-hidden">
                             <div class="card-header d-flex align-items-center mh-100">
-                                <button class="btn btn-light d-xxl-none d-flex align-items-center px-2 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#Contactoffcanvas" aria-controls="Contactoffcanvas"> <i class="bx bx-menu fs-18"></i> </button>
+                                <button class="btn btn-light d-xxl-none d-flex align-items-center px-2 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#Contactoffcanvas" aria-controls="Contactoffcanvas"> <i class="bx bx-user fs-18"></i> </button>
                                 <div class="d-flex align-items-center">
                                     <img src="/images/users/avatar-4.jpg" class="me-2 rounded" height="36" alt="avatar-4" />
                                     <div class="d-none d-md-flex flex-column">
@@ -408,8 +315,6 @@
                                     <ul class="list-inline float-end d-flex gap-3 mb-0 align-items-center">
                                         <li class="list-inline-item fs-20 dropdown">
                                         <li class="list-inline-item fs-20 dropdown">
-                                            <a data-bs-toggle="offcanvas" href="#user-profile" class="text-dark">
-                                                <i class="bx bx-user"></i>
                                             </a>
                                         </li>
                                         
@@ -662,62 +567,6 @@
                             </div>
                             
                 
-                            <!-- Profile Start -->
-                             
-                            <div class="offcanvas offcanvas-end position-absolute shadow border-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="user-profile" aria-labelledby="user-profileLabel">
-                                <div class="offcanvas-header">
-                                    <h5 class="offcanvas-title text-truncate w-50" id="user-profileLabel">پروفایل</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="بستن"></button>
-                                </div>
-                                <div class="offcanvas-body p-0 h-100" data-simplebar>
-                                    <div class="p-3">
-                                        <div class="text-center">
-                                            <img src="/images/users/avatar-4.jpg" alt="shreyu" class="img-thumbnail avatar-lg rounded-circle mb-1">
-                                            <h4>گیلبرت چیکوین</h4>
-                                            <p class="text-muted mt-2 fs-14">آخرین تعامل: <strong class="text-orange">درحال بررسی</strong></p>
-                                        </div>
-                            
-                                        <div class="mt-3">
-                                            <hr>
-                            
-                                            <p class="mt-3 mb-1"><strong><i class="bi bi-phone"></i> شماره تلفن:</strong></p>
-                                            <p>+1 456 9595 9594</p>
-                            
-                                            <p class="mt-3 mb-1"><strong><i class="bi bi-geo-alt"></i> سن:</strong></p>
-                                            <p> 28 سال </p>
-                            
-                                            <p class="mt-3 mb-1"><strong><i class="bi bi-globe"></i> وضعیت تاهل:</strong></p>
-                                            <p> مجرد </p>
-
-                                            <p class="mt-3 mb-1"><strong><i class="bi bi-globe"></i>  ابتلا به بیماری خاص:</strong></p>
-                                            <p> ندارد </p>
-
-                                            <p class="mt-3 mb-1"><strong><i class="bi bi-globe"></i>  مصرف دارو:</strong></p>
-                                            <p> ندارد </p>
-
-                                            
-                                            <li class="list-inline-item fs-20 dropdown mt-3 mb-1">
-                                                <button type="button" class="btn btn-warning rounded-pill">مشاهده سوابق</button>
-                                                
-                                            </li>
-
-                                            <li class="list-inline-item fs-20 dropdown mt-3 mb-1">
-                                                <button type="button" class="btn btn-danger rounded-pill">مسدود کردن کاربر</button>
-                                            </li>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-                            <!-- Profile End -->
-                        </div> <!-- end card -->
-                    </div> <!-- end col -->
-                </div> <!-- end row -->
-            </div>
-        </div>
-    </div>
 
 
 <script src="assets/js/search.js"></script>

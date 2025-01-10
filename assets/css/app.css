@@ -13969,7 +13969,7 @@ textarea.form-control-lg {
 }
 .dropdown .app-search .form-control {
   border: none;
-  width: 300px;
+  width: 200px;
   padding-right: 40px;
   padding-left: 15px;
   background-color: var(--bs-topbar-search-bg);
@@ -13993,13 +13993,14 @@ textarea.form-control-lg {
 
 .topbar .app-search .form-control {
   border: none;
-  width: 300px;
+  width: 100%;
   padding-right: 40px;
   padding-left: 15px;
   background-color: var(--bs-topbar-search-bg);
   box-shadow: none;
   height: 42px;
 }
+
 .topbar .app-search .search-widget-icon {
   position: absolute;
   z-index: 10;
