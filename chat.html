@@ -12,7 +12,7 @@
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/icons.css">
@@ -331,7 +331,6 @@
                             
                             <div class="chat-box">
                                 <ul class="chat-conversation-list p-3 chatbox-height">
-                                
                                     <li class="clearfix">
                                         <div class="chat-conversation-text">
                                             <div class="d-flex">
@@ -563,7 +562,8 @@
                                             <div class="col-sm-auto">
                                                 <div class="">
                                                     <div class="btn-group btn-toolbar">
-                                                        <a href="javascript: void(0);" class="btn btn-sm btn-light"><i class="bx bx-paperclip fs-18"></i></a>
+                                                        <input type="file" id="actual-btn" style="display: none;">
+                                                        <label class="btn btn-sm btn-light" for="actual-btn" style="border-radius: 0px 7px 7px 0px;"><i class="bx bx-paperclip fs-18"></i></label>
                                                         <button type="submit" class="btn btn-sm btn-primary chat-send"><i class="bx bx-send fs-18"></i></button>
                                                     </div>
                                                 </div>
@@ -575,7 +575,7 @@
                             
                 
 
-
+<script src="assets/js/pages/upload.js"></script>
 <script src="assets/js/search.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/layout.js"></script>

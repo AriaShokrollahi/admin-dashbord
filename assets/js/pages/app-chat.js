@@ -1,5 +1,4 @@
 /*
-Template Name: Larkon - Responsive 5 Admin Dashboard
 Author: Techzaa
 File: chat js
 */
