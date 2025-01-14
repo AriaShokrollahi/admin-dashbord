@@ -105,3 +105,4 @@ class Chat {
 document.addEventListener('DOMContentLoaded', function (e) {
     new Chat().init();
 });
+

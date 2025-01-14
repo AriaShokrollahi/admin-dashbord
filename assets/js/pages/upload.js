@@ -1,50 +1,117 @@
-document.getElementById('fileForm').addEventListener('submit', async (event) => {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+    const fileInput = document.getElementById("actual-btn");
+    const sendButton = document.querySelector(".btn-primary.chat-send");
 
-    const fileInput = document.getElementById('fileInput');
-    const formData = new FormData();
-    formData.append('file', fileInput.files[0]);
-
-    try {
-        const response = await fetch('/upload', {
-            method: 'POST',
-            body: formData,
-        });
-
-        if (response.ok) {
-            document.getElementById('response').textContent = 'فایل با موفقیت ارسال شد!';
-        } else {
-            document.getElementById('response').textContent = 'خطایی رخ داد.';
+    // وقتی فایل انتخاب شد
+    fileInput.addEventListener("change", function () {
+        const file = fileInput.files[0];
+        if (file) {
+            // Toast سفارشی برای فایل انتخاب‌شده
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'success',
+                title: `فایل انتخاب شد: ${file.name}`,
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                background: '#C98B8B',
+                color: '#000000',
+                iconColor: '#28a745',
+                customClass: {
+                    popup: 'custom-toast',
+                },
+            });
         }
-    } catch (error) {
-        document.getElementById('response').textContent = 'خطا در ارسال فایل: ' + error.message;
-    }
+    });
+
+    // وقتی دکمه ارسال کلیک شد
+    sendButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        const file = fileInput.files[0];
+        if (!file) {
+            // Toast سفارشی برای خطا هنگام ارسال فایل
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'error',
+                title: 'لطفاً یک فایل انتخاب کنید!',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                background: '#f8d7da',
+                color: '#000000',
+                iconColor: '#dc3545',
+                customClass: {
+                    popup: 'custom-toast',
+                },
+            });
+            return;
+        }
+
+        // ارسال فایل به سرور
+        const formData = new FormData();
+        formData.append("file", file);
+
+        fetch("/upload", {
+            method: "POST",
+            body: formData,
+        })
+            .then((response) => {
+                if (response.ok) {
+                    // Toast موفقیت ارسال فایل
+                    Swal.fire({
+                        toast: true,
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'فایل با موفقیت ارسال شد!',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        background: '#C98B8B',
+                        color: '#000000',
+                        iconColor: '#28a745',
+                        customClass: {
+                            popup: 'custom-toast',
+                        },
+                    });
+                } else {
+                    // Toast خطا در ارسال فایل
+                    Swal.fire({
+                        toast: true,
+                        position: 'top-end',
+                        icon: 'error',
+                        title: 'مشکلی در ارسال فایل وجود دارد.',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        background: '#f8d7da',
+                        color: '#000000',
+                        iconColor: '#dc3545',
+                        customClass: {
+                            popup: 'custom-toast',
+                        },
+                    });
+                }
+            })
+            .catch((error) => {
+                console.error("خطا در ارسال فایل:", error);
+                // Toast خطا در ارسال فایل
+                Swal.fire({
+                    toast: true,
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'خطا در ارسال فایل!',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    background: '#f8d7da',
+                    color: '#000000',
+                    iconColor: '#dc3545',
+                    customClass: {
+                        popup: 'custom-toast',
+                    },
+                });
+            });
+    });
 });
-
-const uploadTrigger = document.querySelector('.upload-trigger');
-const fileInput = document.getElementById('fileInput');
-
-// رویداد کلیک برای باز کردن پنجره انتخاب فایل
-uploadTrigger.addEventListener('click', () => {
-    fileInput.click(); // باز کردن input انتخاب فایل
-});
-
-// رویداد تغییر (هنگامی که فایل انتخاب شد)
-fileInput.addEventListener('change', () => {
-    const selectedFile = fileInput.files[0];
-    if (selectedFile) {
-        alert(`فایل "${selectedFile.name}" انتخاب شد!`);
-        // اینجا می‌توانید کد ارسال فایل به سرور را اضافه کنید
-    }
-});
-
-document.getElementById('actual-btn').addEventListener('change', function(event) {
-    const file = event.target.files[0]; // گرفتن فایل انتخاب شده
-    const fileNameDisplay = document.getElementById('file-name'); // عنصر نمایش نام فایل
-
-    if (file) {
-      fileNameDisplay.textContent = `نام فایل: ${file.name}`; // نمایش نام فایل
-    } else {
-      fileNameDisplay.textContent = 'هیچ فایلی انتخاب نشده است.'; // حالت پیش‌فرض
-    }
-  });

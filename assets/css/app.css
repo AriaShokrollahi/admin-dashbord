@@ -15305,6 +15305,14 @@ button:focus {
   --bs-btn-focus-shadow-rgb: 0 0 0 $btn-focus-width rgba($bg, 0.5);
 }
 
+.custom-toast {
+  font-family: "IRANSans", Arial, sans-serif; /* فونت دلخواه */
+  color: #000 !important; /* تضمین مشکی بودن متن */
+  background-color: inherit; /* ارث‌بری از تم اصلی */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* سایه جذاب */
+}
+
+
 .btn-soft-teal {
   --bs-btn-color: #040505;
   --bs-btn-bg: rgba(4, 5, 5, 0.1);
