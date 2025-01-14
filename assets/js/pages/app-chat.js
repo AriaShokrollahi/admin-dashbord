@@ -4,6 +4,7 @@ File: chat js
 */
 
 
+let outputFile = null
 class Chat {
 
     initStatus() {
@@ -28,12 +29,53 @@ class Chat {
 
         const form = document.querySelector('form#chat-form');
         const messageInput = form.querySelector('input');
+
+        //file handling
+        const fileInput = document.getElementById("actual-btn");
+
+        fileInput.addEventListener("change", function () {
+        const file = fileInput.files[0];
+
+        if (file) {
+            
+
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                outputFile = event.target.result; // Data URL of the image
+            };
+
+            reader.readAsDataURL(file);
+
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'success',
+                title: `فایل انتخاب شد: ${file.name}`,
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                background: '#C98B8B',
+                color: '#000000',
+                iconColor: '#28a745',
+                customClass: {
+                    popup: 'custom-toast',
+                },
+            });
+        }
+        });
+
+
         form.addEventListener('submit', function (e) {
             e.preventDefault();
             const message = messageInput.value;
             if (message.trim().length > 0) {
                 messageInput.value = "";
                 self.sendMessage(message);
+            }
+            if(outputFile){
+                self.sendMessage(null, outputFile)
+                outputFile = null
             }
 
         });
@@ -45,16 +87,32 @@ class Chat {
         }
     }
 
-    sendMessage(message) {
+    sendMessage(message=null, file=null) {
         const self = this;
-        const messageNode = this.toNodes(this.createHTMLMessageFromMe(message));
-        if (this.simplebar.getContentElement()) {
-            this.simplebar.getContentElement().appendChild(messageNode);
-            this.simplebar.recalculate();
-            this.scrollToBottom();
-            setTimeout(function () {
-                self.receiveMessage("Server is not connected 😔");
-            }, 1000);
+        
+
+        if (message != null){
+            const messageNode = this.toNodes(this.createHTMLMessageFromMe(message));
+            if (this.simplebar.getContentElement()) {
+                this.simplebar.getContentElement().appendChild(messageNode);
+                this.simplebar.recalculate();
+                this.scrollToBottom();
+                setTimeout(function () {
+                    self.receiveMessage("Server is not connected 😔");
+                }, 1000);
+            }
+        }
+
+        if (file != null){
+            const ImageNode = this.toNodes(this.createHTMLFileMessage(file));
+            if (this.simplebar.getContentElement()) {
+                this.simplebar.getContentElement().appendChild(ImageNode);
+                this.simplebar.recalculate();
+                this.scrollToBottom();
+                setTimeout(function () {
+                    self.receiveMessage("Server is not connected 😔");
+                }, 1000);
+            }
         }
     }
 
@@ -81,6 +139,20 @@ class Chat {
 
     toNodes(html) {
         return new DOMParser().parseFromString(html, 'text/html').body.childNodes[0]
+    }
+
+    createHTMLFileMessage(fileUrl) {
+        const today = new Date();
+        const time = today.getHours() + ":" + today.getMinutes() + " " + (today.getHours() > 11 ? "pm" : "am");
+        return `<li class="clearfix odd">
+            <div class="chat-conversation-text ms-0">
+                <div class="d-flex justify-content-end">
+                    <a href="${fileUrl}images/a.jpg"><img src="${fileUrl}" style="height:10rem;"></a>
+                </div>
+                <p class="text-muted fs-12 mb-0 mt-1">${time}</p>
+            </div>
+        </li>
+        `;
     }
 
     scrollToBottom(smooth = true) {
